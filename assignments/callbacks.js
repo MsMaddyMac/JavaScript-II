@@ -39,18 +39,18 @@
 
 
 
-// function getLength(arr, cb) {
+ function getLength(arr, cb) {
 // //   // getLength passes the length of the array into the callback.
-//     cb(arr.length);
-// }
-// getLength(items, (lengthOfList) => {
-//   console.log(lengthOfList);
-// });
+     cb(arr.length);
+ }
+ getLength(items, (lengthOfList) => {
+   console.log(lengthOfList);
+ });
 
-// function last(arr, cb) {
-// //   // last passes the last item of the array into the callback.
-//   cb(arr[arr.length-1]);
-// }
+//  function last(arr, cb) {
+// // //   // last passes the last item of the array into the callback.
+//    cb(arr[arr.length-1]);
+// // }
 // last(items, (lastElement) => { 
 //   console.log(lastElement);
 // });
