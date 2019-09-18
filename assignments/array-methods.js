@@ -87,10 +87,22 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
-// The director needs a list of all the runner's email addresses to send them their race day packet pickup information. Create a new array with only the names and email addresses for each runner.
+// The director needs a list of all the runner's email addresses to send them their race day packet pickup information. Create a new array with only the names and email addresses combined for each runner.
+let emailAddresses = [];
+runners.forEach(function(emails) {
+  return emailAddresses.push(`${emails.first_name} ${emails.email}`);
+});
+console.log(emailAddresses);
 
 // Problem 2
-// The accounting department just realized all the donations were off by $30. Add $30 to each donation then tally up a new donationPriceTotal.
+// The accounting department just realized all the donations were off by $30. Add $30 to each donation and save the new total tallied total into a donationTotal variable.
+let donationTotal = runners.reduce(function(accumulator, item){
+  return accumulator + item.donation + 30;
+}, 0);
+console.log(donationTotal);
 
 // Problem 3
 // The list containing runner with small and medium shirt sizes is missing. Create a new array with runners that have small or medium shirt sizes.
+
+let runnersSmMedSizeShirt = runners.filter(size => size.shirt_size === "S" || size.shirt_size === "M");
+console.log(runnersSmMedSizeShirt);
