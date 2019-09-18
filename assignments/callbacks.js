@@ -92,6 +92,7 @@ function checks(item, list){
     return false;
   }
 }
+console.log(contains('Gum', items, checks));
 console.log(contains('candy', items, checks));
 
 
