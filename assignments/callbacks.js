@@ -99,8 +99,20 @@ console.log(contains('candy', items, checks));
 
 // /* STRETCH PROBLEM */
 
-// function removeDuplicates(array, cb) {
+const item = ['Pencil', 'Notebook', 'yo-yo', 'Gum', 'Gum', 'Pencil'];
+
+let removeDuplicates = item.reduce(function (accumulator, currentValue){
+  if (accumulator.indexOf(currentValue) === -1) {
+    accumulator.push(currentValue);
+  }
+  return accumulator
+}, [])
+
+console.log(removeDuplicates);
+
 //   removeDuplicates removes all duplicate values from the given array.
 //   Pass the duplicate free array to the callback function.
 //   Do not mutate the original array.
-// }
+
+
+  
